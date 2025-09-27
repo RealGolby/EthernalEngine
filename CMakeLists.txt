@@ -14,7 +14,13 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(glfw)
 
 # Add executable
-add_executable(EthernalEngine src/main.cpp src/glad.c)
+add_executable(EthernalEngine src/main.cpp src/glad.c
+        src/Rendering/Shader.cpp
+        src/Rendering/Shader.h
+        include/stb/stb_image.h
+        src/Rendering/Images/Texture.cpp
+        src/Rendering/Images/Texture.h
+)
 
 # Link libraries
 target_link_libraries(EthernalEngine PRIVATE glfw opengl32)
